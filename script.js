@@ -9,4 +9,8 @@ function handleFormSubmit(e) {
   let destLocation = e.target.elements["location"].value;
   let destPhoto = e.target.elements["photo"].value;
   let destDescription = e.target.elements["description"].value;
+
+  for (let i = 0; i < detailsForm.length; i++) {
+    detailsForm.elements[i].value = "";
+  }
 }
