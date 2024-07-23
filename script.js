@@ -11,6 +11,6 @@ function handleFormSubmit(e) {
   let destDescription = e.target.elements["description"].value;
 
   for (let i = 0; i < detailsForm.length; i++) {
-    detailsForm.elements[i].value = "";
+    detailsForm.element[i].value = "";
   }
 }
