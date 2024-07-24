@@ -14,10 +14,18 @@ function handleFormSubmit(e) {
     detailsForm.element[i].value = "";
   }
 
+  let destCard = createDestinationCard(
+    destName,
+    destLocation,
+    destPhoto,
+    destDescription
+  );
+
   let wishListContainer = document.getElementById("destinations_container");
   if (wishListContainer.children.length === 0) {
     document.getElementById("title").innerHTML = "My wishlist";
   }
+  document.querySelector("#destinations_container").appendChild(destCard);
 }
 
 function createDestinationCard(name, location, photoURL, description) {
@@ -61,4 +69,9 @@ function createDestinationCard(name, location, photoURL, description) {
   card.appendChild(cardBody);
 
   return card;
+}
+
+function removeDestination(e) {
+  let card = e.target.parentElement.parentElement;
+  card.remove();
 }
