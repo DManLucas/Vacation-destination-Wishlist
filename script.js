@@ -11,7 +11,7 @@ function handleFormSubmit(e) {
   let destDescription = e.target.elements["description"].value;
 
   for (let i = 0; i < detailsForm.length; i++) {
-    detailsForm.element[i].value = "";
+    detailsForm.elements[i].value = "";
   }
 
   let destCard = createDestinationCard(
@@ -44,7 +44,7 @@ function createDestinationCard(name, location, photoURL, description) {
   card.appendChild(img);
 
   let cardBody = document.createElement("div");
-  cardBody.className("card-body");
+  cardBody.className = "card-body";
 
   let cardTitle = document.createElement("h3");
   cardTitle.innerText = name;
